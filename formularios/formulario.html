@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <!--Etiquetas Obligatorias-->
+        <meta charset="utf-8" >
+        <meta name="viewport" content = "width=device-width , initial-scale=1, shrink-to-fit=no" >
+
+        <!--Etiquetas opcionales-->
+        <meta name="description" content="Mi primera página web">
+        <meta name="keywords" content="Html,Css,JavaScript,TypeScript,Angular">
+        <meta name="author" content="Néstor Costa">
+        <title>Formularios</title>
+
+    </head>
+
+    <body>
+       
+        <form>
+            <label for="nombre">
+                Nombre: <input type="text" name="nombre" id="nombre" required/>
+            </label>
+            <br>
+            <label for="apellidos">
+                Apellidos: <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos"/>
+            </label>
+            <br>
+            <label>
+                Password: <input type="password" name="password" size="80" minlength="6" maxlength="12"/>
+            </label>
+            <br>
+            <label>
+                Edad: <input type="number" name="number" min="0" max="102" step="2" value="25"/>
+            </label>
+            <br>
+            <p>
+                <label>
+                    Fecha y Horal Local: <input type="datetime-local" name="hora" />
+                </label>
+                
+            </p>
+            <p>
+                <label>
+                    Fecha Nacimiento: <input type="date" name="fecha" max="27/01/2023"/>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Sexo:
+                </label>
+                <label>
+                    Hombre:<input type="radio" name="sexo" value="H"/>
+                </label>
+                <label>
+                    Mujer: <input type="radio" name="sexo" value="M"/>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="file" name="file" accept="image/*" multiple>
+                </label>
+            </p>
+            <p>
+                <button>
+                    <input type="submit" name="submit" value="SUBMIT">
+                </button>
+                <button >
+                    <input type="reset" name="reset" value="RESET">
+                </button>
+                <button>
+                    <input type="button" name="button" value="BUTTON">
+                </button>
+            </p>
+        </form>
+
+    </body>
+
+</html>
