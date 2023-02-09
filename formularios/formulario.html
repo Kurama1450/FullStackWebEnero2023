@@ -61,7 +61,32 @@
                 </label>
             </p>
             <p>
-                
+                <label>Opinión<br>
+                    <textarea name="opinion" id="opinion" cols="20" rows="5">
+
+                    </textarea>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <select name="pais" id="pais">
+                        <option value="">&nbsp;</option>
+                        <optgroup>
+                            <option value="espanya">España</option>
+                        <option value="francia">Francia</option>
+                        <option value="italia" hidden>Italia</option>
+                        <option value="argentina">Argentina</option>
+                        </optgroup>
+                        <optgroup label="Sudamérica">
+                            <option value="maya" disabled>Maya</option>
+                            <option value="brasil">Brasil</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <fieldset>
+                    <legend>Botones:</legend>
                 <input type="submit" name="submit" value="SUBMIT">
                 
                 <input type="reset" name="reset" value="RESET">
@@ -75,6 +100,7 @@
                 <button>
                     <img src="/images/logo-eoi.png" alt="Logo EOI"/>
                 </button>
+                </fieldset>
             </p>
         </form>
 
