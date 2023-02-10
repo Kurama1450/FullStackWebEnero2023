@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <!--Etiquetas Obligatorias-->
+        <meta charset="utf-8" >
+        <meta name="viewport" content = "width=device-width , initial-scale=1, shrink-to-fit=no" >
+
+        <!--Etiquetas opcionales-->
+        <meta name="description" content="Mi primera página web">
+        <meta name="keywords" content="Html,Css,JavaScript,TypeScript,Angular">
+        <meta name="author" content="Néstor Costa">
+        <title>Ejercicio 2</title>
+
+    </head>
+
+    <body>
+
+        <form action="segundo.html" method="get">
+            <fieldset>
+                <legend>Datos básicos</legend>
+                <label for="nombre">
+                    Nombre<br>
+                    <input style="width: 350px;" type="text" name="nombre" id="nombre" minlength="5" maxlength="50" required>
+                </label>
+                <br><br>
+                <label>
+                    Descripción<br>
+                    <textarea rows="4" cols="50"></textarea>
+                </label>
+                <br><br>
+                <label>
+                    Foto: <input type="file" id="fileInput" accept="image/*">
+                </label>
+                <br>
+                <p>
+                    <input type="checkbox">Añadir contador de visitas
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Datos económicos</legend>
+                <label for="precio">
+                    Precio
+                    <input style="width:50px" type="number" name="precio" id="precio" required>
+                    €
+                </label>
+                <label>&emsp; Impuestos
+                    <select name="impuestos" id="impuestos">
+                        <option value="4">4%</option>
+                        <option value="7">7%</option>
+                        <option value="16">16%</option>
+                        <option value="25">25%</option>
+                    </select>
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" name="promocion" value="N" checked>Ninguno
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="promocion" value="G">Transporte gratuito
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="promocion" value="D">Descuento 5%
+                </label>
+                <br>
+            </fieldset>
+            <input type="submit" value="2a pantalla">
+        </form>
+    </body>
+
+</html>
