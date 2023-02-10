@@ -15,7 +15,14 @@
     </head>
 
     <body>
-        Hola Mundo
+        <script>
+            const parametros = new URLSearchParams(window.location.search);
+            //let nombre = parametros.get('nombre');
+            //console.log(nombre);
+            parametros.forEach(e=>{console.log(e)});
+            document.body.innerHTML = "<h1>Hola: " + parametros.get('nombre') + "</h1><br>"
+            document.body.innerHTML += "<h2>Se ha gastado usted: " + parametros.get('precio') + " euros</h2>"
+        </script>
     </body>
 
 </html>
