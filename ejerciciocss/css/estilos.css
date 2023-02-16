@@ -39,6 +39,14 @@ ol{
     font-size: 20px;
 }
 
-.abecedario{
+.abecedario{ /*Clase*/
     list-style-type: lower-alpha;
+}
+
+#unh2concreto{ /*id*/
+    color: gold;
+}
+
+ol li{ /*Cualquier li que se encuentre dentro de un ol será modificadp */
+    font-size:48px;
 }
