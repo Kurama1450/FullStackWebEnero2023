@@ -50,3 +50,27 @@ ol{
 ol li{ /*Cualquier li que se encuentre dentro de un ol será modificadp */
     font-size:48px;
 }
+
+.elementos_azules{
+    color: blue;
+}
+
+.lista_none{
+    list-style-type: none;
+    color: red;
+}
+
+.lista_circle{
+    list-style-type: circle;
+    color: green;
+}
+
+.lista_square{
+    list-style-type: square;
+    color: gold;
+}
+´
+.lista_disc{
+    list-style-type: disc;
+    color: blue;
+}
