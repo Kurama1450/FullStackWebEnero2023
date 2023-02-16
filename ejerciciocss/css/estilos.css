@@ -22,5 +22,23 @@ a:visited{
 }
 
 a:hover{
+    background-color: yellow;
     text-decoration:none;
+}
+
+ul{
+    list-style: upper-roman;
+}
+
+ol{
+    list-style-type: none;
+}
+
+.numeros_romanos{
+    list-style: upper-roman;
+    font-size: 20px;
+}
+
+.abecedario{
+    list-style-type: lower-alpha;
 }
