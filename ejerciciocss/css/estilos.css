@@ -48,7 +48,7 @@ ol{
 }
 
 ol li{ /*Cualquier li que se encuentre dentro de un ol será modificadp */
-    font-size:48px;
+    font-size:28px;
 }
 
 .elementos_azules{
@@ -74,3 +74,41 @@ ol li{ /*Cualquier li que se encuentre dentro de un ol será modificadp */
     list-style-type: disc;
     color: blue;
 }
+
+#textoprincipal{
+    width: 350px;
+    height: 150px;
+    margin: 10px;
+    padding: 25px;
+    border: 5px solid black;
+}
+
+#listasdesordenadas{
+    width: 350px;
+    height: 150px;
+    margin: 10px;
+    padding: 25px;
+    border: 5px solid red;
+}
+
+.caja1{
+    border: 5px solid red;
+    background-color: lightgray;
+    padding: 10px;
+    margin: 25px;
+    width: 250px;
+    height: 200px;
+
+}
+
+.caja2{
+     border: 7px solid green;
+     background-color: gray;
+     padding: 5px;
+     margin: 0px;
+     width: 300px;
+     height: 200px;
+     color: white;
+     
+ }
+    
