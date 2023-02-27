@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="content-type" content="text/html" />
+<meta name="author" content="isabel" />
+<title>Untitled 2</title>
+<script>
+//aplicamos función cuando se carga la página en el navegador.
+window.onload = function() {
+    //variable que toma el Id “información” esta función se encuentra más adelante.
+    let info=document.getElementById("informacion");
+    //número de títulos h1en todo el documento.
+    let mostrarh1=document.getElementsByTagName("h1");
+	info.innerHTML="Número de h1:"+mostrarh1.length;
+    //let negritas=document.getElementsByTagName("b");
+	let negritasPagina = document.getElementsByTagName("strong");
+	info.innerHTML=info.innerHTML+"<br>CANTIDAD NEGRITAS EN LA PAGINA ES: "+negritasPagina.length;
+    //let peques=document.getElementsByTagName("small");
+	let smallPagina = document.getElementsByTagName("small");
+	info.innerHTML=info.innerHTML+"<br>CANTIDAD SMALLS EN LA PAGINA ES: "+smallPagina.length;
+    //let parrafos=document.getElementsByTagName("p");
+    //let parrafo2=parrafos[1];
+    //let parrafo2=document.getElementsByTagName("p")[1];
+   // let negritasP2=parrafo2.getElementsByTagName("b");
+	let p2 = document.getElementsByTagName("p")[1];
+	let negritasP2=p2.getElementsByTagName("strong");
+	info.innerHTML=info.innerHTML+"<br>CANTIDAD NEGRITAS EN EL PARRAFO 2 ES: "+negritasP2.length;
+
+    //escribe dentro de info (innerHTML) en el id “información” y pone texto + cuántos elementos hay en mostrarh1.
+    //info.innerHTML="estos son los <strong>h1</strong>: "+mostrarh1.length+"<br>";
+    //info.innerHTML+="estos son los b: "+negritas.length+"<br>";
+    //info.innerHTML+="estos son los small: "+peques.length+"<br>";
+    //info.innerHTML+="estos son los b del párrafo 2: "+negritasP2.length;
+	
+	//Equivalencias entre funciones DOM
+	//let div = document.getElementById("informacion");
+	//let div = document.querySelector("#informacion");
+	
+	//let arrayP = document.getElementsByTagName("p");
+	//let arrayP = document.querySelectorAll("p");
+	
+	//let arrayH2 = document.getElementByClassName("titulo2")[0];
+	//let arrayH2 = document.querySelectorAll(".titulo2")[0];
+	//let h2 = document.querySelector(".titulo2");
+	
+	//let parrafos=document.getElementsByTagName("p");
+	//let parrafos = document.querySelectorAll("h1+p");
+}
+
+
+</script>
+</head>
+<body>
+    <div id="informacion" style= "border:thin solid silver; padding:.5em"></div>
+    <h1>Ejemplo1</h1>
+    <p>Este es el primer párrafo del ejemplo, vamos a introducir <strong>negrita</strong> y <i>cursiva</i></p>
+    <h2 class="titulo2">ejemplo 2</h2>
+    <p><small>Este <strong>es</strong> el segundo <strong>párrafo</strong> más pequeño</small> </p>
+    <h1>ejemplo 3</h1>
+    <p> Este es el tercer <strong>párrafo</strong> más grande</p>
+</body>
+</html>

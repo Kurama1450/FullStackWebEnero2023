@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="content-type" content="text/html" />
+<meta name="author" content="isabel" />
+<title>Untitled 2</title>
+<script>
+//aplicamos función cuando se carga la página en el navegador.
+window.onload = function() {
+    let cuerpo = document.body;//Accede directamente al body.
+	let hijos = cuerpo.children;//Los hijos del body.
+	console.log("Hijos del body : "+hijos.length);
+	
+	let parrafo2 = hijos[4];
+	console.log(parrafo2.id);
+	let hermanoAnt = parrafo2.previousElementSibling;
+	console.log(hermanoAnt.id);
+	let hermanoSig=parrafo2.nextElementSibling;
+	console.log(hermanoSig.id);
+	let padre = parrafo2.parentNode;
+	console.log(padre.nodeName);
+}
+
+
+</script>
+</head>
+<body>
+    <div id="informacion" style= "border:thin solid silver; padding:.5em"></div>
+    <h1>Ejemplo1</h1>
+    <p>Este es el primer párrafo del ejemplo, vamos a introducir <strong>negrita</strong> y <i>cursiva</i></p>
+    <h2 class="titulo2" id="hijoAnterio">ejemplo 2</h2>
+    <p id="hijoSituado"><small>Este <strong>es</strong> el segundo <strong>párrafo</strong> más pequeño</small> </p>
+    <h1 id="hijoSiguiente">ejemplo 3</h1>
+    <p> Este es el tercer <strong>párrafo</strong> más grande</p>
+</body>
+</html>

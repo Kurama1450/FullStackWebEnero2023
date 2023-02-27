@@ -1,0 +1,65 @@
+<DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio Eventos</title>
+	<script>
+		function borrarParrafo(){
+			let parrafos=document.getElementsByTagName("p");//Accede a todos los parrafos
+			if(parrafos.length == 0)
+				alert("Error no hay parrafos a eliminar")
+			else{
+				let ultimoP=parrafos[parrafos.length-1];//Acceder al ultimo parrafo
+				ultimoP.parentNode.removeChild(ultimoP);//Eliminar ese ultimo parrafo usando removeChild.
+			}
+		}
+		
+		function crearParrafo(cantidad){
+			let cantidad = document.getElementsByTagName("p").length;
+			let parrafo = document.createElement("p");
+			let texto = document.createTextNode("PÁRRAFO" +(cantidad+1));
+			parrafo.onclick=function(){
+				crearParrafo();
+			}
+			parrafo.appendChild(texto);//Añade el nuevo parrafo en el ultimo.
+			document.body.appendChild(parrafo);
+		}
+		
+		window.onload=function(){
+			let titulo = document.querySelector("h1");//Acceder al nodo titulo 
+			titulo.onclick = borrarParrafo;//Añadir evento click al titulo
+			
+			let parrafos = document.getElementsByTagName("p");
+			for(let elemento of parrafos)
+				elemento.addEventListener("click",function(){
+					crearParrafo(parrafos.length);
+				});
+		}
+	</script>
+</head>
+<body>
+	<h1>TÍTULO<h1>
+	<p>PÁRRAFO 1</p>
+	<p>PÁRRAFO 2</p>
+	<p>PÁRRAFO 3</p>
+	<p>PÁRRAFO 4</p>
+</body>
+</html>
+
+
+/*
+	Si pulsamos el titulo eliminar el último parrafo
+	
+	1)Acceder al nodo titulo 
+	2)Añadir evento click al titulo
+	3)Desarrollar función que elimine el último parrado
+		3.1)Acceder al ultimo parrafo
+		3.2)Eliminar ese ultimo parrafo usando removeChild.
+	4)Si no hay parrafo dar un mensaje de error
+	
+	1)Pedir al usuario cantidad
+	2)Crear un desplegable con tantos option como el numero que ha dado
+	Elemento 1 ..... Elemento N
+	3)Crear tantos RadioButtons como elementos también
+	4) Si cambias el valor del radio se cambie el desplegable y vicecersa.
+*/	

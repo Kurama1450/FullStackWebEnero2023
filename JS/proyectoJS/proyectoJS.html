@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+	<!--style>
+		table{
+			border-collapse:collapse;
+		}
+		table,td,div{
+			border:1px solid black;
+		}
+	</style>-->
+	<script src="proyectoJS.js"></script>
+</head>
+<body>
+	
+	<form name="formu" method="get" action="#">
+		<fieldset>
+			<legend>Programa de Multiplicar</legend>
+			<p>
+			<label>Tabla Multiplicar: <input type="text" name="tabla"></label>
+			</p>
+			
+			<p>
+			<label for="cant">Cantidad Filas: <input type="text" name="cantidad"></label>
+			</p>
+			
+			<p>
+				Estructura: 
+				<label>Tabla: <input type="radio" name="estructura" value="TABLA"></label>
+				<label>Lista: <input type="radio" name="estructura" value="LISTA"></label>
+				<label>Párrafos: <input type="radio" name="estructura" value="PARRAFOS"></label>
+				<label>Desplegable: <input type="radio" name="estructura" value="DESPLEGABLE"></label>
+				
+			</p>
+				<input type="submit" value="EJECUTAR" name="ejecutar">
+		</fieldset>
+	</form>
+</body>
+</html>

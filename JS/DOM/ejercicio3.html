@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html">
+		<meta name="author" content="Pablo Garramone">
+		<title>Ejercicio 3</title>
+	</head>
+	<body>
+		<div id="informacion">
+			<p>Este es el primer párrafo del ejemplo, vamos a introducir
+				<strong id="str" class="neg">negrita</strong> y
+				<a href="pru.html">enlace</a>
+			</p>
+			<h2>ejemplo 2</h2>
+			<p id="p2">Este es el segundo párrafo</p> <h1>ejemplo 3</h1>
+			<p> Este es el tercer párrafo</p>
+		</div>
+		<script>
+			window.onload = function(){
+			
+			let parrafo1 = document.getElementsByTagName("p")[0];
+			console.log(parrafo1.nodeName+" "+parrafo1.innerHTML);
+			
+			let parrafo2 = document.querySelectorAll("p")[0];
+			console.log(parrafo2.nodeName+" "+parrafo2.innerHTML);
+			
+			let parrafo = document.getElementsByTagName("p");
+			let parrafo3 = parrafo[0];
+			console.log(parrafo3.nodeName+" "+parrafo3.innerHTML);
+			
+			let division = document.getElementById("informacion");
+			parrafo4 = division.children[0];
+			console.log(parrafo4.nodeName+" "+parrafo4.innerHTML);
+			
+			let str = document.getElementsByClassName("neg")[0];
+			parrafo5 = str.parentNode;
+			//let str = document.querySelector(".neg");
+			console.log(parrafo5.nodeName+" "+parrafo5.innerHTML);
+			
+			let cabecera = document.head;
+			let cuerpo = cabecera.nextElementSibling;
+			parrafo6 = cuerpo.children[0].children[0];
+			console.log(parrafo6.nodeName+" "+parrafo6.innerHTML);
+			
+			let p2 = document.querySelector("#p2");
+			let h2 = p2.previousElementSibling;
+			parrafo7 = h2.previousElementSibling;
+			console.log(parrafo7.nodeName+" "+parrafo7.innerHTML);
+			
+			parrafo8 = document.querySelector("div > p");
+			console.log(parrafo8.nodeName+" "+parrafo8.innerHTML);
+		}	
+		</script>
+	</body>
+</html>
