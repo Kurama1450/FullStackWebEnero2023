@@ -53,18 +53,30 @@ UN BOTON AÑADIR. AÑADA 1 NUEVO A LA ESTRUCTURA.*/
 		let tablaM = f.tabla.value;
 		let cantidad = f.cantidad.value;
 		
-		if(this.id=="tabla")
+		if(this.id=="tabla"){
 			hacerLista(tablaM,cantidad);
-		else if(this.id == "lista")
+			document.formu.estructura.value="LISTA";
+		}	
+		else if(this.id == "lista"){
 			hacerDesplegable(tablaM,cantidad);
-		else if(this.id="desplegable")
+			document.formu.estructura.value="DESPLEGABLE";
+		}	
+		else if(this.id="desplegable"){
 			hacerParrafo(tablaM,cantidad);
-		else
+			document.formu.estructura.value="PARRAFOS";
+		}	
+		else{
 			hacerTabla(TablaM,cantidad);
-		
+			document.formu.estructura.value="TABLA";
+		}
 		this.parentNode.removeChild(this);
 	}
 	
+	function cambiarEstructura2(){
+		menu();
+		document.body.removeChild(document.body.children[0]);
+	}
+
 	function hacerLista(tablaMulti,row){
 		let lista = document.createElement("ul");//Acabo de crear la etiqueta ul
 		lista.id="lista";
@@ -154,6 +166,11 @@ UN BOTON AÑADIR. AÑADA 1 NUEVO A LA ESTRUCTURA.*/
 				filas=f.cantidad.value;
 			}
 			
+			let radios = document.formu.estructura;
+			for(let i = 0; i < radios.length; i++){
+				radios[i].onclick=cambiarEstructura2;
+			}
+
 			switch(modo){ 
 				case "LISTA":
 								hacerLista(tabla,filas);
